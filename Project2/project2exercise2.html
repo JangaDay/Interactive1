@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Washington Post</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-size: 16px;
+      }
+
+      #myGrid {
+        margin:100px;
+        
+        /* make it a grid */
+        display: grid;
+      
+        /* define the cells of the grid */
+        /* change these numbers   👇🏻  or units (like 100px or 2fr)*/
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-rows: auto;
+        
+        /* grid gutter */
+        grid-gap: 20px;
+
+      }
+      #TWP {font-size: 65px;
+        grid-column: span 3;
+      }
+      #upperleft {
+        grid-column: span 1;
+      }
+      #eagle { 
+        font-size: 50px;
+        grid-column: span 5;
+        background-color: transparent;
+      }
+      #paragraph {
+        grid-column: span 2;
+        background-color: transparent;
+
+      }
+
+
+      p {
+        /* style our text */
+        font-size: 0.91em;
+        line-height: 1.3em;
+        
+        margin:0;
+        padding:1em;
+        
+        background: lightgreen;
+      }
+      
+      /* this selects every p that follows a p in the same parent */
+      
+
+#box3 {
+  grid-column: span 3;
+  grid-row: span 10;
+  background-color: transparent; 
+}
+      h1 {
+        /* set the h1 to span 2 columns */
+        grid-column: span 3; 
+        
+        margin: 0;
+        font-size:25px;
+        line-height:1.3em;
+      }
+
+      img {
+        width:100%; 
+      }
+      
+      .inline-image {
+        /* float the inline image, and style it */
+        max-width: 33%;
+        float: right;
+        padding: 15px;
+        margin: 0 0 0 15px;
+        background: white;
+      }
+      
+      a {
+        /* style links */
+        color:hotpink; 
+        text-decoration: none;
+        transition: color 1s linear;
+      }
+      a:hover {
+        color:blue;
+      }
+      
+    </style>
+  </head>
+  <body>    
+  <div id="myGrid">
+    <p id="upperleft">Upper Left</p>
+    <p id="TWP">
+      The Washington Post
+    </p>
+    
+    <p>
+      upper right
+    </p>
+    <p id="eagle">
+      'The Eagle Has Landed'-Two Men Walk on the Moon
+    <p id="box3">
+      <img src="http://3.bp.blogspot.com/-4vx5PRtimxk/T7afzpsCkxI/AAAAAAAAAK8/nZFv4T7BhtE/s1600/Moon+Landing+1920x1200+wallpaper.jpg">
+   
+    </p>
+    
+  
+    <p id="paragraph">In order to go to the Moon, a spacecraft must first leave the gravity well of the Earth. The only practical way of accomplishing this currently is with a rocket. Unlike other airborne vehicles such as balloons or jets, a rocket is the only known form of propulsion which can continue to increase its speed at high altitudes in the vacuum outside the Earth's atmosphere.
+
+Upon approach of the target moon, a spacecraft will be drawn ever closer to its surface at increasing speeds due to gravity. In order to land intact it must decelerate to less than about 160 kilometres per hour (99 mph) and be ruggedized to withstand a "hard landing" impact, or it must decelerate to negligible speed at contact for a "soft landing" (which is the only viable option with human occupants). The first three attempts by the U.S. to perform a successful hard moon landing with a ruggedized seismometer package in 1962 all failed.[5] The Soviets first achieved the milestone of a hard lunar landing with a ruggedized camera in 1966, followed only months later by the first unmanned soft lunar landing by the U.S.
+
+</p>
+    <p>
+      <strong>put an empty cell before this one</strong>
+    </p>
+    
+    <p>
+     Paragraph after picture
+    </p>
+    
+    <div style="width: 100%; height: 50px">
+      
+    </div>
+    
+    <!-- what happens if you add more elements? -->
+</div>
+  </body>
+</html>
