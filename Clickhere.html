@@ -26,7 +26,13 @@ display: none
   display:none;
   position: absolute;
       top:14%;
-      left:19%;}
+      left:25%;}
+
+  #gif3 {
+  display:none;
+  position: absolute;
+      top:32%;
+      left:42%;}
 
   #loading {
     position: absolute;
@@ -41,6 +47,38 @@ display: none
       display: none;
     }
     #loading3 {
+    position: absolute;
+      top:85%;
+      left:45%;
+      display: none;
+    }
+
+    #loading4 {
+    position: absolute;
+      top:85%;
+      left:45%;
+      display: none;
+    }
+
+    #loading5 {
+    position: absolute;
+      top:85%;
+      left:45%;
+      display: none;
+    }
+    #loading6 {
+    position: absolute;
+      top:85%;
+      left:45%;
+      display: none;
+    }
+    #loading7 {
+    position: absolute;
+      top:85%;
+      left:45%;
+      display: none;
+    }
+    #loading8 {
     position: absolute;
       top:85%;
       left:45%;
@@ -64,17 +102,33 @@ display: none
     <img class="lg" src="project2/source.gif">
   </div>
 
+  <img id="gif3" class="lg" src="project2/watch.gif">
+
   <img id="gif7" class="lg" src="clickhere/Armadillo-girl.gif">
 
   <div id="loading" > <p>loading...Wait ten seconds</p>
   </div>
 
-   <div id="loading2"> <p>Ok sorry just a few more seconds</p>
+   <div id="loading2"> <p>Ok sorry just a few more seconds...</p>
   </div>
 
   <div id="loading3"> <p>Honestly I don't know why it's taking so long...</p>
   </div>
 
+   <div id="loading4"> <p>I swear it's gonna load, just give it a second</p>
+  </div>
+
+   <div id="loading5"> <p>I think It's working</p>
+  </div>
+
+  <div id="loading6"> <p>Just like 4 or 5 more seconds</p>
+  </div>
+
+  <div id="loading7"> <p>Ok maybe I lied, probably like 10 more seconds or something, but I swear its going to be worth it</p>
+  </div>
+
+  <div id="loading8"> <p>finally</p>
+  </div>
   <script>
 function myFunction() {
     var x = document.getElementById("gif");
@@ -82,13 +136,18 @@ function myFunction() {
     let loading = document.getElementById("loading");
     let loading2 = document.getElementById("loading2");
     let loading3 = document.getElementById("loading3");
+    let loading4 = document.getElementById("loading4");
+    let loading5 = document.getElementById("loading5");
+    let loading6 = document.getElementById("loading6");
+    let loading7 = document.getElementById("loading7");
+    let loading8 = document.getElementById("loading8");
     if (x.style.display === "none" || x.style.display === "") {
         x.style.display = "block";
         setTimeout(function(){
           gif7.style.display ="block"
           console.log('50 seconds!')
 
-        },40000)
+        },50000)
 
 
           loading.style.display ="block"
@@ -100,7 +159,7 @@ function myFunction() {
 
           let intervalID = setInterval(function(){
             time ++
-            loading.innerText = "loading...Wait "+(startTime - time)+"seconds"
+            loading.innerText = "loading...Wait "+(startTime - time)+" seconds"
             if(time >= 10){
               clearInterval(intervalID)
               loading.style.display = "none"
@@ -120,10 +179,51 @@ function myFunction() {
         },10000)
 
             setTimeout(function(){
+          gif3.style.display ="block"
+          console.log('50 seconds!')
+
+        },15000)
+
+            setTimeout(function(){
           loading3.style.display ="block"
+          loading2.style.display ="none"
+          console.log('50 seconds!')
+
+        },15000)
+
+            setTimeout(function(){
+          loading4.style.display ="block"
+          loading3.style.display ="none"
           console.log('50 seconds!')
 
         },20000)
+
+            setTimeout(function(){
+          loading5.style.display ="block"
+          loading4.style.display ="none"
+          console.log('50 seconds!')
+
+        },22000)
+
+            setTimeout(function(){
+          loading6.style.display ="block"
+          loading5.style.display ="none"
+          console.log('50 seconds!')
+
+        },25000)
+            setTimeout(function(){
+          loading7.style.display ="block"
+          loading6.style.display ="none"
+          console.log('50 seconds!')
+
+        },30000)
+
+             setTimeout(function(){
+          loading8.style.display ="block"
+          loading7.style.display ="none"
+          console.log('50 seconds!')
+
+        },50000)
 
 
 
