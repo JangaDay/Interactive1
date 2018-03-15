@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Click Here</title>
+    <style>
+     #button { 
+      position: absolute;
+      top:50%;
+      left:50%;
+    }
+    #gif {
+   position: absolute;
+      top:40%;
+      left:44%;
+display: none
+}
+
+#gif2 {
+  display:none;
+  position: absolute;
+      top:32%;
+      left:37%;
+}
+
+  #loading {
+    position: absolute;
+      top:85%;
+      left:45%;
+      display: none;
+    }
+  #loading2 {
+    position: absolute;
+      top:85%;
+      left:45%;
+      display: none;
+    }
+
+
+    </style>
+  
+  <body>
+    </div>
+<div>
+     <button onclick="myFunction()" id="button" type="button">Click Me!</button>
+  </div>
+  <div id="gif" >
+    <img class="lg" src="clickhere/loading_spinner.gif">
+  </div>
+  <img id="gif2" class="lg" src="clickhere/Armadillo-girl.gif">
+
+  <div id="loading" > <p>loading...Wait ten seconds</p>
+  </div>
+
+   <div id="loading2"> <p>Ok sorry just a few more seconds</p>
+  </div>
+
+  <script>
+function myFunction() {
+    var x = document.getElementById("gif");
+    var gif2 = document.getElementById("gif2");
+    let loading = document.getElementById("loading");
+    let loading2 = document.getElementById("loading2");
+    
+    if (x.style.display === "none" || x.style.display === "") {
+        x.style.display = "block";
+        setTimeout(function(){
+          gif2.style.display ="block"
+          console.log('50 seconds!')
+
+        },50000)
+
+
+          loading.style.display ="block"
+          console.log('10 seconds!')
+
+          let startTime = 10
+
+          let time = 0
+
+          let intervalID = setInterval(function(){
+            time ++
+            loading.innerText = "loading...Wait "+(startTime - time)+"seconds"
+            if(time >= 10){
+              clearInterval(intervalID)
+              loading.style.display = "none"
+            }
+          },1000)
+
+
+
+        
+        
+        } else {
+        x.style.display = "none";
+    }
+  }
+</script>
+
+  </body>
+</html>
