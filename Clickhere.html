@@ -15,12 +15,18 @@
 display: none
 }
 
-#gif2 {
+#gif7 {
   display:none;
   position: absolute;
       top:32%;
-      left:37%;
+      left:43%;
 }
+
+#gif2 {
+  display:none;
+  position: absolute;
+      top:14%;
+      left:19%;}
 
   #loading {
     position: absolute;
@@ -29,6 +35,12 @@ display: none
       display: none;
     }
   #loading2 {
+    position: absolute;
+      top:85%;
+      left:45%;
+      display: none;
+    }
+    #loading3 {
     position: absolute;
       top:85%;
       left:45%;
@@ -46,7 +58,13 @@ display: none
   <div id="gif" >
     <img class="lg" src="clickhere/loading_spinner.gif">
   </div>
-  <img id="gif2" class="lg" src="clickhere/Armadillo-girl.gif">
+  
+
+   <div id="gif2" >
+    <img class="lg" src="project2/source.gif">
+  </div>
+
+  <img id="gif7" class="lg" src="clickhere/Armadillo-girl.gif">
 
   <div id="loading" > <p>loading...Wait ten seconds</p>
   </div>
@@ -54,20 +72,23 @@ display: none
    <div id="loading2"> <p>Ok sorry just a few more seconds</p>
   </div>
 
+  <div id="loading3"> <p>Honestly I don't know why it's taking so long...</p>
+  </div>
+
   <script>
 function myFunction() {
     var x = document.getElementById("gif");
-    var gif2 = document.getElementById("gif2");
+    var gif7 = document.getElementById("gif7");
     let loading = document.getElementById("loading");
     let loading2 = document.getElementById("loading2");
-    
+    let loading3 = document.getElementById("loading3");
     if (x.style.display === "none" || x.style.display === "") {
         x.style.display = "block";
         setTimeout(function(){
-          gif2.style.display ="block"
+          gif7.style.display ="block"
           console.log('50 seconds!')
 
-        },50000)
+        },40000)
 
 
           loading.style.display ="block"
@@ -85,6 +106,25 @@ function myFunction() {
               loading.style.display = "none"
             }
           },1000)
+
+            setTimeout(function(){
+          loading2.style.display ="block"
+          console.log('50 seconds!')
+
+        },10000)
+
+            setTimeout(function(){
+          gif2.style.display ="block"
+          console.log('50 seconds!')
+
+        },10000)
+
+            setTimeout(function(){
+          loading3.style.display ="block"
+          console.log('50 seconds!')
+
+        },20000)
+
 
 
 
