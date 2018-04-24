@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Distracting Canvas</title>
+
+    <style>
+      
+      h1 {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+      }
+
+      #pinkButton {
+    background-color: pink;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    top:-24px;
+    right:-9px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#lightbluebutton {
+    background-color: lightblue;
+    border: 3px;
+    color: black;
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    top:-24px;
+    right:-12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#yellowbutton {
+    background-color: yellow;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    top:-24px;
+    right:-15px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#blackbutton {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    top:-24px;
+    right:-18px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#redbutton {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    top:19px;
+    right:127px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#bluebutton {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    top:19px;
+    right:125px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#greenbutton {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    top:19px;
+    right:122px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#purplebutton {
+    background-color: purple;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    top:19px;
+    right:118px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#smallbutton {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 9px 9px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    position:relative;
+    right:256px;
+    top:76px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#mediumstrokebutton {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 9px 9px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    position:relative;
+    right:367px;
+    top:130px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#largebutton {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 9px 9px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    position:relative;
+    right:493px;
+    top:185px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#eraser {
+    background-color:pink;
+    border: none;
+    color: black;
+    padding: 9px 9px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    position:relative;
+    right:604px;
+    top:240px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#distractionFrame {
+  display:none;
+}
+#distractionFrame.show {
+  display: block;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Draw Something</h1>
+
+    <button id="pinkButton"></button>
+    <button id="lightbluebutton"></button>
+    <button id="yellowbutton"></button>
+    <button id="blackbutton"></button>
+    <button id="redbutton"></button>
+    <button id="bluebutton"></button>
+    <button id="greenbutton"></button>
+    <button id="purplebutton"></button>
+    <button id="smallbutton">Small Brush</button>
+    <button id="mediumstrokebutton">Medium Brush</button>
+    <button id="largebutton">Large Brush</button>
+    <button id="eraser">Eraser</button>
+
+    <canvas id="myCanvas" height="100" width="100"></canvas>
+    <iframe id="distractionFrame"></iframe>
+    <script>
+let myCanvas = document.querySelector('#myCanvas')
+let pinkButton = document.querySelector('#pinkButton')
+
+
+let urls = [
+  'http://www.facebook.com',
+  'https://www.youtube.com/',
+  'https://twitter.com/',
+  'https://www.instagram.com/',
+
+]
+
+
+function randomlyDoBad(){
+  if(Math.random() < 0.4){
+    let randomLength = Math.random() * urls.length
+    let index = Math.floor(randomLength)
+
+    let s = myCanvas.toDataURL('image/png')
+
+    var link = document.createElement("a");
+    link.download = 'hi-'+Math.round(window.performance.now())+'.png';
+    link.href = s;
+    document.body.appendChild(link);
+    link.click();
+
+    // console.log(s)
+    setTimeout(()=>{
+      window.location.href = urls[index]
+    },100)
+    // distractionFrame.classList.add('show')
+    // todo make distraction frame take over
+  }
+}
+
+distractionFrame.classList.remove('show')
+
+pinkButton.addEventListener('click',function(){
+  myDrawContext.strokeStyle = "pink"  
+  randomlyDoBad()
+})
+
+lightbluebutton.addEventListener('click',function(){
+  myDrawContext.strokeStyle = "lightblue"
+  randomlyDoBad()  
+})
+
+yellowbutton.addEventListener('click',function(){
+  myDrawContext.strokeStyle = "yellow"
+  randomlyDoBad()  
+})
+
+blackbutton.addEventListener('click',function(){
+  myDrawContext.strokeStyle = "black"
+  randomlyDoBad()  
+})
+
+redbutton.addEventListener('click',function(){
+  myDrawContext.strokeStyle = "red"
+  randomlyDoBad()  
+})
+
+bluebutton.addEventListener('click',function(){
+  myDrawContext.strokeStyle = "blue"
+  randomlyDoBad()  
+})
+
+greenbutton.addEventListener('click',function(){
+  myDrawContext.strokeStyle = "green"
+  randomlyDoBad()  
+})
+
+purplebutton.addEventListener('click',function(){
+  myDrawContext.strokeStyle = "purple"
+  randomlyDoBad()  
+})
+
+smallbutton.addEventListener('click',function(){
+  myDrawContext.lineWidth = 1  
+  randomlyDoBad()
+})
+
+mediumstrokebutton.addEventListener('click',function(){
+  myDrawContext.lineWidth = 5 
+  randomlyDoBad() 
+})
+
+largebutton.addEventListener('click',function(){
+  myDrawContext.lineWidth = 10 
+  randomlyDoBad() 
+})
+
+eraser.addEventListener('click',function(){
+  myDrawContext.strokeStyle = "white"
+  randomlyDoBad()  
+})
+
+myCanvas.width = window.innerWidth
+myCanvas.height = window.innerHeight
+
+// then we need to get its 'drawing context'
+let myDrawContext = myCanvas.getContext('2d')
+
+// store mouse position when it moves
+let m = {
+  x:0, y:0, down: false
+}
+document.addEventListener('mousemove', (e)=>{
+  m.x = e.clientX
+  m.y = e.clientY - myCanvas.offsetTop
+})
+
+document.addEventListener('mousedown', (e)=>{
+  m.down = true
+})
+
+document.addEventListener('mouseup', (e)=>{
+  m.down = false
+})
+
+// make a particle that will chase the mouse
+let lastDraw = {
+  x:0, y:0
+}
+
+myDrawContext.strokeStyle = "black"
+
+window.requestAnimationFrame(loop)
+
+function loop(){
+  // p.x += (m.x - p.x) * 0.1
+  // p.y += (m.y - p.y) * 0.1
+  // myDrawContext.fillRect(p.x - 2, p.y - 2, 5, 5)
+  if(m.down){
+    myDrawContext.beginPath()
+    myDrawContext.moveTo(lastDraw.x,lastDraw.y)
+    myDrawContext.lineTo(m.x,m.y)
+    myDrawContext.closePath()
+    myDrawContext.stroke()  
+  }
+  
+  lastDraw.x = m.x
+  lastDraw.y = m.y
+  window.requestAnimationFrame(loop)
+}
+        
+      
+
+    </script>
+
+
+  </body>
+</html>
